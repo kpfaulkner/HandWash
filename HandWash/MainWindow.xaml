@@ -1,0 +1,45 @@
+﻿<Window x:Class="HandWash.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="581.343" Width="962.811">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Height="30">
+            <MenuItem x:Name="File" Header="File" >
+                <MenuItem Header="Open Project" HorizontalAlignment="Left"/>
+            </MenuItem>
+            <MenuItem x:Name="Edit" Header="Edit"/>
+            <MenuItem x:Name="Options" Header="Options"/>
+        </Menu>
+
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Center">
+            <Button Click="Button_Click" >Do It!</Button>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Left">
+
+            <ListView DockPanel.Dock="Left" Width="100" Height="400">
+            
+            </ListView>
+            <Button>
+                Save
+            </Button>
+            <Button>
+                Remove
+            </Button>
+        </StackPanel>
+        <ScrollViewer DockPanel.Dock="Left" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Width="350">
+            <TextBox Name="SOAPRequest" TextWrapping="Wrap" >
+      Input SOAP
+            </TextBox>
+        </ScrollViewer>
+        <ScrollViewer DockPanel.Dock="Right" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Width="350">
+            <TextBox Name="SOAPResponse" TextWrapping="Wrap">
+Results
+            </TextBox>
+        </ScrollViewer>
+       
+
+
+    </DockPanel>
+    
+</Window>
